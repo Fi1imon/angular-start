@@ -6,6 +6,7 @@ import {DickComponent} from "./dick/dick.component";
 import { PussyComponent } from './pussy/pussy.component';
 import { SexComponent } from './sex/sex.component';
 import {AnalComponent} from "./anal/anal.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import {AnalComponent} from "./anal/anal.component";
     AnalComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

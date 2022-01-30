@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SexComponent implements OnInit {
 
+  title = 'Initial'
+
+  onInput(event: any) {
+    this.title = event.target.value
+  }
+
   constructor() { }
 
   ngOnInit(): void {
