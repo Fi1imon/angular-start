@@ -16,6 +16,15 @@ export class AppComponent {
 
   inputPisanina = ''
 
+  Message = ''
+
+  iLove() {
+    this.Message = 'Marry me?)'
+  }
+
+  deleteMessage() {
+    this.Message = '...'
+  }
 
   onClick () {
     console.log('Shake your butt')
