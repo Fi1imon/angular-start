@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SexComponent implements OnInit {
 
-  backTurnOn = false
+  TurnOn = false
 
   buttTxt = 'Turn On'
 

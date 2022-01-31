@@ -1,25 +1,10 @@
 <p>sex works!</p>
 
-<button (click)="buttChange($event)" (click)="backTurnOn = !backTurnOn">{{buttTxt}}</button>
+<button (click)="TurnOn = !TurnOn">{{buttTxt}}</button>
 
-<!--<div [ngStyle]="{-->
-<!--  width: '300px',-->
-<!--  height: '150px',-->
-<!--  borderRadius: '10px',-->
-<!--  border: '3px solid red',-->
-<!--  background: backTurnOn ? 'green' : 'red'-->
-<!--  }">-->
+<p *ngIf="TurnOn; else redPar" class="green">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Error, totam.</p>
 
-<!--</div>-->
-
-<!--<p [ngClass]="{-->
-<!--  green: backTurnOn,-->
-<!--  red: !backTurnOn-->
-<!--}-->
-<!--" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Atque, mollitia.</p>-->
-
-<p
-  [class.red]="!backTurnOn"
-  [class.green]="backTurnOn"
->Lorem ipsum dolor sit amet, consectetur adipisicing elit. Culpa ipsum molestiae quaerat repudiandae saepe similique!</p>
+<ng-template #redPar>
+  <p class="red">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto corporis cum doloribus dolorum inventore minima?</p>
+</ng-template>
 
