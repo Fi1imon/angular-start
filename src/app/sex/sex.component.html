@@ -1,20 +1,3 @@
 <p>sex works!</p>
 
 
-
-<button
-  (click)="turnOn = !turnOn"
->{{buttTxt}}</button>
-
-<button
-  (click)="turnOn = 111"
->Fuck me</button>
-
-<div
-  [ngSwitch]="turnOn"
->
-  <p *ngSwitchCase="true" class="green">Lorem ipsum dolor.</p>
-  <p *ngSwitchCase="false" class="red">Lorem ipsum dolor sit amet, consectetur.</p>
-  <p *ngSwitchDefault>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea, enim?</p>
-</div>
-

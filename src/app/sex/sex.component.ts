@@ -7,16 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SexComponent implements OnInit {
 
-  turnOn: any = false
-
-  buttTxt = 'Turn On'
-
-  buttChange (event: any) {
-    if (this.buttTxt === 'Turn On') {
-      this.buttTxt = 'Turn Off'
-    }
-    else this.buttTxt = 'Turn On'
-  }
+  buttBoolean: any = null
 
   constructor() { }
 

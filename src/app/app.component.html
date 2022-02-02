@@ -1,26 +1,22 @@
 <h1>Hello Angular MF!!</h1>
 
-<!--<p>{{ title }}</p>-->
+<!--<ul>-->
+<!--  <li *ngFor="let biceps of arr; let ddx = index">-->
+<!--    {{ddx + 1}} <strong>{{biceps}}</strong>-->
+<!--  </li>-->
+<!--</ul>-->
 
-<!--<p>{{number - 2}}</p>-->
+<ul>
+  <li *ngFor="let doggies of dogs">
+    <p>{{doggies.title}} <b>{{doggies.Name}}</b></p>
+    <ul>
+      <li *ngFor="let comments of doggies.comments">
+        <div>
+          <p>{{comments.owner}}</p>
+          <small>{{comments.age}}</small>
+        </div>
+      </li>
+    </ul>
 
-<!--<p>{{arr}}</p>-->
-
-<!--<p>{{obj.a}}</p>-->
-
-<!--<p>{{'Hello, pidar!'}}</p>-->
-
-<app-sex></app-sex>
-
-<!--<button (click)="onClick()">Push me baby!</button>-->
-
-<!--<input-->
-<!--  type="text"-->
-<!--&gt;-->
-<!--<p><strong>{{Message}}</strong></p>-->
-
-<!--<app-dick></app-dick>-->
-
-<!--<hr>-->
-
-<!--<app-anal></app-anal>-->
+  </li>
+</ul>
