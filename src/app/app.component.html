@@ -10,7 +10,10 @@
 
       <hr />
 
-      <app-header></app-header>
+      <app-header
+      *ngFor="let p of headers"
+      [post]="p"
+      ></app-header>
     </div>
 
   </section>
