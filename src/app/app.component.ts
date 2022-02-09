@@ -13,7 +13,11 @@ export interface Header {
 })
 export class AppComponent {
   headers: Header[] = [
-    {title: 'Eaters of burgers', text: 'Burgers eaters are fat and ill people'},
+    {title: 'Eaters of burgers', text: 'Burgers eaters are fat and ill people', id: 1},
     {title: 'Eaters of sushi', text: 'Nya KawaII', id: 228}
   ]
+  updatePosts (post: Header) {
+    this.headers.unshift(post)
+    console.log('Post', post)
+  }
 }

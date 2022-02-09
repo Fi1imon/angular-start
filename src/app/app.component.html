@@ -6,7 +6,9 @@
 
       <h1>Angular Components1</h1>
 
-      <app-header-form></app-header-form>
+      <app-header-form
+        (onAdd)="updatePosts($event)"
+      ></app-header-form>
 
       <hr />
 
