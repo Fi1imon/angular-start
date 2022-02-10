@@ -1,4 +1,4 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, ElementRef, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {Header} from "../app.component";
 
 @Component({
@@ -9,6 +9,8 @@ import {Header} from "../app.component";
 export class HeaderFormComponent implements OnInit {
 
   @Output() onAdd: EventEmitter<Header> = new EventEmitter<Header>()
+
+  @ViewChild('titleInput') inputRef: ElementRef | any
 
   title = ''
   text = ''
@@ -29,6 +31,10 @@ export class HeaderFormComponent implements OnInit {
       this.title = this.text = ''
     }
 
+  }
+
+  focusTitle () {
+    this.inputRef.nativeElement.focus()
   }
 
 }
