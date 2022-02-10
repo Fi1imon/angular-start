@@ -15,7 +15,12 @@
       <app-header
       *ngFor="let p of headers"
       [post]="p"
-      ></app-header>
+      >
+        <small *ngIf="p.text.length > 10; else tooShort">Постик то длинноват</small>
+        <ng-template #tooShort>
+          <small>Постик то коротковат</small>
+        </ng-template>
+      </app-header>
     </div>
 
   </section>
