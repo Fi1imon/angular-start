@@ -13,13 +13,16 @@
       <hr />
 
       <app-header
-      *ngFor="let p of headers"
-      [post]="p"
+        *ngFor="let p of headers"
+        [post]="p"
       >
-        <small *ngIf="p.text.length > 10; else tooShort">Постик то длинноват</small>
-        <ng-template #tooShort>
-          <small>Постик то коротковат</small>
-        </ng-template>
+        <div #info>
+          <small *ngIf="p.text.length > 10; else tooShort">Постик то длинноват</small>
+          <ng-template #tooShort>
+            <small>Постик то коротковат</small>
+          </ng-template>
+        </div>
+
       </app-header>
     </div>
 

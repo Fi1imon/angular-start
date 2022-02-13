@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, ContentChild, ElementRef, Input, OnInit} from '@angular/core';
 import {Header} from "../app.component";
 
 @Component({
@@ -11,9 +11,13 @@ export class HeaderComponent implements OnInit {
   @Input()
   post!: Header;
 
+
+  @ContentChild('info', {static: true}) infoRef!: ElementRef;
+
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log(this.infoRef.nativeElement)
   }
 
 }
