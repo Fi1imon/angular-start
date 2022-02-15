@@ -15,6 +15,7 @@
       <app-header
         *ngFor="let p of headers"
         [post]="p"
+        (onRemove)="deletePost($event)"
       >
         <div #info>
           <small *ngIf="p.text.length > 10; else tooShort">Постик то длинноват</small>

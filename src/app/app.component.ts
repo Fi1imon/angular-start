@@ -21,4 +21,9 @@ export class AppComponent {
     this.headers.unshift(post)
     console.log('Post', post)
   }
+
+  deletePost(id: number) {
+    console.log('Id to remove ', id)
+    this.headers = this.headers.filter( p => p.id !== id)
+  }
 }
