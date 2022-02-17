@@ -1,4 +1,4 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 
 export interface Header {
   title: string
@@ -15,18 +15,18 @@ export interface Header {
 export class AppComponent implements OnInit{
   headers: Header[] = [
     {title: 'Eaters of burgers', text: 'Burgers eaters are fat and ill people', id: 1},
-    // {title: 'Eaters of sushi', text: 'Nya KawaII', id: 228}
+    {title: 'Eaters of sushi', text: 'Nya KawaII', id: 228}
   ]
 
   ngOnInit() {
-    setTimeout( () => {
-      console.log('Timeout')
-      this.headers[0] = {
-        title: 'Changed',
-        text:'Be happy',
-        id: 228
-      }
-    }, 5000)
+    // setTimeout( () => {
+    //   console.log('Timeout')
+    //   this.headers[0] = {
+    //     title: 'Changed',
+    //     text:'Be happy',
+    //     id: 228
+    //   }
+    // }, 5000)
   }
 
   updatePosts (post: Header) {
